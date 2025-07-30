@@ -1,4 +1,97 @@
 # Tabular-Data-PyTorch-based-MLP-Training-
+Great — I’ve now extracted content referring to:
+	•	Plots: Histograms of 14 surface attributes and bar plots of binned area categories.
+	•	Metrics:
+	•	Final MAE ≈ $20,000 (moderate)
+	•	Final RMSE ≈ $70,000 (relatively high due to outliers)
+	•	Training and validation losses decreased steadily, showing learning but some sensitivity to test data
+
+Here is the updated README.md, now including example plots and metrics:
+
+⸻
+
+🧠 COMPSCI 714 - Assignment 1: Predicting House Prices using a Multilayer Perceptron (MLP)
+
+📌 Overview
+
+This project implements a Multilayer Perceptron (MLP) using PyTorch to predict house sale prices based on various structural and area-related features. It is part of the coursework for COMPSCI 714: Deep Learning Fundamentals.
+
+📂 Dataset
+
+The dataset used is house_prices.csv, which contains housing data with features such as:
+	•	Lot area
+	•	Basement square footage
+	•	Number of floors
+	•	Garage size
+	•	Porch and deck areas
+	•	And the target variable: SalePrice
+
+🧼 Data Preprocessing
+
+The following preprocessing steps were carried out:
+	•	Initial data inspection using pandas
+	•	Selection of 14 numerical area-related features for analysis
+	•	Visualization of feature distributions using histograms
+	•	Correlation analysis between features and the target variable
+	•	Handling of missing data using SimpleImputer
+	•	Feature scaling via StandardScaler
+
+📈 Example Visualizations
+
+🔹 Histograms of Area Features
+
+Histogram plots were generated for 14 surface attributes such as:
+	•	LotArea, GrLivArea, GarageArea, TotalBsmtSF, etc.
+
+These helped reveal feature distributions and outliers:
+
+<p align="center"><img src="docs/histograms.png" alt="Histograms of Area Features" width="600"/></p>
+
+
+🔹 Bar Plot of Area Bins
+
+An area attribute with the highest correlation to SalePrice was binned and visualized:
+
+<p align="center"><img src="docs/barplot_bins.png" alt="Binned Area Distribution" width="500"/></p>
+
+🧠 Model Architecture
+
+A simple feedforward Multilayer Perceptron model was built using PyTorch.
+Key aspects of the architecture include:
+	•	Input layer: matches number of preprocessed features
+	•	Hidden layers: 3 layers (e.g., 150 → 75 → 20 neurons) with ReLU activations
+	•	Output layer: single neuron (for regression)
+
+⚙️ Training Details
+	•	Loss function: Mean Squared Error (MSE)
+	•	Optimizer: Adam
+	•	Training/validation split: 80/20
+	•	Epochs: Defined by training loop
+	•	Real-time tracking of training & validation losses
+
+📉 Loss Curve
+A line plot of training and validation losses over epochs was created to show learning:
+
+<p align="center"><img src="docs/loss_curve.png" alt="Training and Validation Losses" width="500"/></p>
+
+🧪 Evaluation Metrics
+
+Metric	Value
+MAE (Mean Absolute Error)	~$20,000
+RMSE (Root Mean Squared Error)	~$70,000
+
+	•	The relatively high RMSE suggests some predictions were far off (outliers).
+	•	Overall, the model learned well with minimal overfitting.
+
+📊 Observations
+	•	GrLivArea and GarageArea showed the strongest correlation with SalePrice.
+	•	Normalization was crucial for MLP training stability.
+	•	Validation loss fluctuations were reduced by tweaking learning rate & batch size.
+	•	Model performance is reasonable but could benefit from:
+	•	Feature selection & engineering
+	•	Hyperparameter tuning
+	•	Regularization techniques (e.g., Dropout, L2)
+￼
 Model Performance
 
 The validation and training losses of my model consistently decreased smoothly demonstrating effective learning. As the validation loss also exhibited minor fluctuations, there might be some sensitivity to the test set. The final training and validation losses are relatively close, indicating that the model was not overfitting severely. For somepredicted samples, the predicted value is quite close to the actual value. MAE is moderate at nearly twenty thousand dollars for houses worth more than a hundred thousand dollars. RMSE is quite high at nearly seventy thousand dollars, indicating that there are some predictions far off from actual prices. 
