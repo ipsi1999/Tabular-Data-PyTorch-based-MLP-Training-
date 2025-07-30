@@ -1,16 +1,4 @@
-# Tabular-Data-PyTorch-based-MLP-Training-
-Great — I’ve now extracted content referring to:
-	•	Plots: Histograms of 14 surface attributes and bar plots of binned area categories.
-	•	Metrics:
-	•	Final MAE ≈ $20,000 (moderate)
-	•	Final RMSE ≈ $70,000 (relatively high due to outliers)
-	•	Training and validation losses decreased steadily, showing learning but some sensitivity to test data
-
-Here is the updated README.md, now including example plots and metrics:
-
-⸻
-
-🧠 COMPSCI 714 - Assignment 1: Predicting House Prices using a Multilayer Perceptron (MLP)
+# Predicting House Prices using a Multilayer Perceptron (MLP)
 
 📌 Overview
 
