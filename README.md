@@ -46,16 +46,16 @@ An area attribute with the highest correlation to SalePrice was binned and visua
 
 A simple feedforward Multilayer Perceptron model was built using PyTorch.
 Key aspects of the architecture include:
-	1. Input layer: matches number of preprocessed features
-	2. Hidden layers: 3 layers (e.g., 150 → 75 → 20 neurons) with ReLU activations
-	3. Output layer: single neuron (for regression)
+1. Input layer: matches number of preprocessed features
+2. Hidden layers: 3 layers (e.g., 150 → 75 → 20 neurons) with ReLU activations
+3. Output layer: single neuron (for regression)
 
 ⚙️ Training Details
-	1. Loss function: Mean Squared Error (MSE)
-	2. Optimizer: Adam
-	3. Training/validation split: 80/20
-	4. Epochs: Defined by training loop
-	5. Real-time tracking of training & validation losses
+1. Loss function: Mean Squared Error (MSE)
+2. Optimizer: Adam
+3. Training/validation split: 80/20
+4. Epochs: Defined by training loop
+5. Real-time tracking of training & validation losses
 
 📉 Loss Curve
 A line plot of training and validation losses over epochs was created to show learning:
